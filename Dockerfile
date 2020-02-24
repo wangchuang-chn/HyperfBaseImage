@@ -7,7 +7,8 @@ EXPOSE 80
 RUN yum -y install  git yum-utils make wget \
     && yum -y install centos-release-scl \
     && yum  -y install devtoolset-7 \
-    && scl enable devtoolset-7 bash \
+    && echo  "export PATH=/opt/rh/devtoolset-7/root/usr/bin/:$PATH" >> /etc/profile \
+    && source /etc/profile \
     && gcc -v \
     && yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
     && yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
