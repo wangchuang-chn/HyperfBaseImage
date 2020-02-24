@@ -8,6 +8,7 @@ RUN yum -y install gcc gcc-c++ git yum-utils make wget \
     && yum -y install centos-release-scl \
     && yum  -y install devtoolset-7 \
     && scl enable devtoolset-7 bash \
+    && gcc -v \
     && yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
     && yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
     && yum-config-manager --enable remi-php72 \
