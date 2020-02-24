@@ -4,7 +4,7 @@ MAINTAINER wangchuang<mail.wangchuang@gmail.com>
 
 EXPOSE 80
 
-RUN yum -y install gcc gcc-c++ git yum-utils make wget \
+RUN yum -y install  git yum-utils make wget \
     && yum -y install centos-release-scl \
     && yum  -y install devtoolset-7 \
     && scl enable devtoolset-7 bash \
