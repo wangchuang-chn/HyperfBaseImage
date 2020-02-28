@@ -18,6 +18,6 @@ RUN yum -y install  git yum-utils make wget \
     && tar zxvf swoole \
     && cd swoole-src-4.4.5 \
     && phpize && ./configure --with-php-config=/usr/bin/php-config --enable-openssl --enable-http2  --enable-sockets --enable-mysqlnd  && make && make install \
-    && echo "extentison=swoole" > /etc/php.ini \
+    && echo "extentison=swoole" >> /etc/php.ini \
     && curl -sS https://getcomposer.org/installer | /usr/bin/php -- --install-dir=/usr/local/bin --filename=composer \
     && yum clean all \
