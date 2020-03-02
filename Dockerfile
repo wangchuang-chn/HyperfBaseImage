@@ -13,7 +13,7 @@ RUN yum -y install  git yum-utils make wget \
     && yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
     && yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm \
     && yum-config-manager --enable remi-php72 \
-    && yum -y install php  php-mysqlnd php-devel php-pear php-pecl-redis5 php-pdo\
+    && yum -y install php  php-mysqlnd php-devel php-pear php-pecl-redis5 php-amqplib php-pdo\
     && wget https://github.com/swoole/swoole-src/archive/v4.4.5.tar.gz -O swoole  \
     && tar zxvf swoole \
     && cd swoole-src-4.4.5 \
