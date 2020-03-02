@@ -2,7 +2,7 @@ FROM centos:centos7
 
 MAINTAINER wangchuang<mail.wangchuang@gmail.com>
 
-EXPOSE 80
+EXPOSE 9501
 
 RUN yum -y install  git yum-utils make wget \
     && yum -y install centos-release-scl \
